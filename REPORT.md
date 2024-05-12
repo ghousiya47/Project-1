@@ -44,4 +44,12 @@ TODO: Replace the image below with your own.
 ![model_test_score.png](img/model_test_score.png)
 
 ## Summary
-TODO: Add your explana
+For this project, I was able to use AutoGluon to train a regression model for predicting bike sharing demand and get a feel for what it's like to enter a Kaggle competition. The project was implemented in AWS Sagemaker Studio.
+
+The AutoGluon 1.1.1 documentation was very helpful for using current code and the AutoGluon AutoML framework for Tabulary Data was incorporated into the project in an automated way which explored the best possible options.
+
+The initial model was trained on the train dataset and resulted in a RMSE score of 1.80608 for the first Kaggle submission.
+
+Exploratory Data Analysis were helpful for identifying which variables were useful and not as useful as datatypes for the model and feature engineering using the "datetime" column. It resulted in a significant improvement of reducing the RMSE score by 1.18395, from 1.80276 to a RMSE score of 0.70335.
+
+Optimizer and hyperparameter tuning using AutoGluon on Neural Networks and Gradient Boost model algorithms were performed. The top ranked model that performed used WeightedEnsemble_L3. The RMSE score improved from 0.70335 to 0.49091.
